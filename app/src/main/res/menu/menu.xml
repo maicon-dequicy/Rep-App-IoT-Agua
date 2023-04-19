@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_menu01"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home"
+        >
+    </item>
+    <item
+        android:id="@+id/nav_menu02"
+        android:icon="@drawable/baseline_area_chart_24"
+        android:title="Gráficos"
+        >
+    </item>
+    <item
+        android:id="@+id/nav_menu03"
+        android:icon="@drawable/ic_baseline_calendar_month_24"
+        android:title="Mensal"
+        >
+    </item>
+</menu>

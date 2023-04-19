@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Perfil_geral">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toollbarPerfil01"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingStart="5dp"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="180dp"
+        android:text="Perfil 01"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toollbarPerfil01" />
+
+    <TextView
+        android:id="@+id/textoSensores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="220dp"
+        android:text="Sensores"
+        android:textColor="@color/cinza_100"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <HorizontalScrollView
+        android:id="@+id/linearBotoes"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoSensores">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/adicionarSensorBotao"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="@color/corBotaoFAB"
+                android:onClick="irTelaAdicionarSensor"
+                android:src="@drawable/ic_baseline_add_24"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+            <Button
+                android:id="@+id/Sensor1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="@color/cinza_100"
+                android:text="Sensor 1"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:cornerRadius="40dp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/Sensor2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="@color/cinza_100"
+                android:text="Sensor 2"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:onClick="irTelaSensor02"
+                app:cornerRadius="40dp"></Button>
+
+            <Button
+                android:id="@+id/Sensor3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="@color/cinza_100"
+                android:text="Sensor 3"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:cornerRadius="40dp"></Button>
+
+            <Button
+                android:id="@+id/Sensor4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="@color/cinza_100"
+                android:text="Sensor 4"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:cornerRadius="40dp"></Button>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="220dp"
+        android:text="Previsão Sensor: "
+        android:textColor="@color/cinza_100"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearBotoes">
+    </TextView>
+
+    <TextView
+        android:id="@+id/PrevisaoSensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="101320, 01"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <Button
+        android:id="@+id/botaoEditarSensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/bc_button"
+        android:text="Editar Sensor"
+        android:textColor="@color/azul_claro300"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PrevisaoSensor"></Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
